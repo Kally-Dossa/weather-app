@@ -1,0 +1,54 @@
+/* Sidebar.css */
+.sidebar {
+  width: 200px;
+  transition: width 0.3s;
+  overflow-x: hidden;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #1c2469;
+}
+
+.sidebar-divider {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-content {
+  flex: 1;
+  background-color: #1c2469;
+  color: white;
+}
+
+.sidebar-list .MuiListItem-root {
+  color: white;
+}
+
+.sidebar-list .MuiListItem-root.active {
+  background-color: #4a90e2;
+}
+
+.sidebar-icon {
+  color: white;
+}
+
+.sidebar-text {
+  color: white;
+}
+
+.sidebar-toggle {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: #2d377e;
+}
