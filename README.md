@@ -16,11 +16,11 @@ npm install
 node server.js
 ```
 
-**3. Front end** Runs on http://localhost:3001
+**3. Front end** Runs on http://localhost:5173
 
 Open a new terminal:
 ```bash
 cd front-end
 npm install
-npm start
+npm run dev
 ```
