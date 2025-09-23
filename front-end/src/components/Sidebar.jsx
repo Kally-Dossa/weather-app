@@ -12,6 +12,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import SearchIcon from "@mui/icons-material/Search";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
+import HomeIcon from "@mui/icons-material/Home";
 
 import "../Css/Sidebar.css";
 
@@ -41,6 +42,18 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
       {/* Content */}
       <div className="sidebar-content">
         <List className="sidebar-list">
+          <ListItem
+            button
+            className={activeTab === "main-page" ? "active" : ""}
+            onClick={() => setActiveTab("main-page")}
+          >
+            <ListItemIcon>
+              <HomeIcon className="sidebar-icon" />
+            </ListItemIcon>
+            {open && (
+              <ListItemText primary="Home page" className="sidebar-text" />
+            )}
+          </ListItem>
           <ListItem
             button
             className={activeTab === "search-weather" ? "active" : ""}
