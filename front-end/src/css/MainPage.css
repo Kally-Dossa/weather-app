@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.main-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.main-container {
+  padding: 3rem;
+  text-align: center;
+  width: 90%;
+  max-width: 1300px;
+}
+
+.main-container h1 {
+  color: #01579b;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.city-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.city-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0277bd;
+}
+
+.city-card .current-weather h3 {
+  font-size: 2rem;
+  color: #0288d1;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-top: 1rem;
+}
