@@ -20,34 +20,36 @@ const ChartWeather = () => {
   };
 
   return (
-    <div className="weather-container">
-      <h1>Weather App</h1>
-      <input
-        type="text"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city..."
-      />
-      <button onClick={getWeather}>Search</button>
+    <div className="chart-page">
+      <div className="chart-container">
+        <h1>Weather App</h1>
+        <input
+          type="text"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          placeholder="Enter city..."
+        />
+        <button onClick={getWeather}>Search</button>
 
-      {data && (
-        <div>
-          <h2>{data.city.charAt(0).toUpperCase() + data.city.slice(1)}</h2>
-          <h3>
-            {(() => {
-              const d = new Date(data.weather.hourly.time[0]);
-              const weekday = d.toLocaleDateString("en-US", {
-                weekday: "long",
-              });
-              const month = d.toLocaleDateString("en-US", { month: "long" });
-              const day = d.getDate();
-              const year = d.getFullYear();
-              return `${weekday} ${month} ${day} ${year}`;
-            })()}
-          </h3>
-          <TemperatureChart hourlyData={data.weather.hourly.temperature_2m} />
-        </div>
-      )}
+        {data && (
+          <div>
+            <h2>{data.city.charAt(0).toUpperCase() + data.city.slice(1)}</h2>
+            <h3>
+              {(() => {
+                const d = new Date(data.weather.hourly.time[0]);
+                const weekday = d.toLocaleDateString("en-US", {
+                  weekday: "long",
+                });
+                const month = d.toLocaleDateString("en-US", { month: "long" });
+                const day = d.getDate();
+                const year = d.getFullYear();
+                return `${weekday} ${month} ${day} ${year}`;
+              })()}
+            </h3>
+            <TemperatureChart hourlyData={data.weather.hourly.temperature_2m} />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

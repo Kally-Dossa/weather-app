@@ -1,7 +1,5 @@
 import { useState } from "react";
 import axios from "axios";
-import React from "react";
-import TemperatureChart from "./TemperatureChart";
 import "../Css/SearchWeather.css";
 import clear from "../images/clear.png";
 import clouds from "../images/clouds.png";
@@ -51,42 +49,44 @@ const SearchWeather = () => {
   };
 
   return (
-    <div className="weather-container">
-      <h1>Weather App</h1>
-      <input
-        type="text"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city..."
-      />
-      <button onClick={getWeather}>Search</button>
-      {data && data.weather?.current_weather && (
-        <div className="current-weather">
-          <h2>{data.city.charAt(0).toUpperCase() + data.city.slice(1)}</h2>
-          <h3>
-            {(() => {
-              const d = new Date(data.weather.hourly.time[0]);
-              const weekday = d.toLocaleDateString("en-US", {
-                weekday: "long",
-              });
-              const month = d.toLocaleDateString("en-US", { month: "long" });
-              const day = d.getDate();
-              const year = d.getFullYear();
-              return `${weekday} ${month} ${day} ${year}`;
-            })()}
-          </h3>
-          <div className="current-weather-row">
-            <span className="temperature">
-              {data.weather.current_weather.temperature}°C
-            </span>
-            <img
-              src={weatherIconMap[data.weather.current_weather.weathercode]}
-              alt="Weather icon"
-              className="weather-icon"
-            />
+    <div className="search-page">
+      <div className="search-container">
+        <h1>Weather App</h1>
+        <input
+          type="text"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          placeholder="Enter city..."
+        />
+        <button onClick={getWeather}>Search</button>
+        {data && data.weather?.current_weather && (
+          <div className="current-weather">
+            <h2>{data.city.charAt(0).toUpperCase() + data.city.slice(1)}</h2>
+            <h3>
+              {(() => {
+                const d = new Date(data.weather.hourly.time[0]);
+                const weekday = d.toLocaleDateString("en-US", {
+                  weekday: "long",
+                });
+                const month = d.toLocaleDateString("en-US", { month: "long" });
+                const day = d.getDate();
+                const year = d.getFullYear();
+                return `${weekday} ${month} ${day} ${year}`;
+              })()}
+            </h3>
+            <div className="current-weather-row">
+              <span className="temperature">
+                {data.weather.current_weather.temperature}°C
+              </span>
+              <img
+                src={weatherIconMap[data.weather.current_weather.weathercode]}
+                alt="Weather icon"
+                className="weather-icon"
+              />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
