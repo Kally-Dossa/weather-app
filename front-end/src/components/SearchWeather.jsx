@@ -8,6 +8,7 @@ import mist from "../images/mist.png";
 import rain from "../images/rain.png";
 import snow from "../images/snow.png";
 import wind from "../images/wind.png";
+import { FaTint, FaWind } from "react-icons/fa";
 
 const weatherIconMap = {
   0: clear,
@@ -83,6 +84,20 @@ const SearchWeather = () => {
                 alt="Weather icon"
                 className="weather-icon"
               />
+            </div>
+            <div className="additional-info-container">
+              <div className="additional-info">
+                <p>
+                  <FaTint className="humidity-icon" />
+                  <span>{data.weather.hourly.relative_humidity_2m[0]}%</span>
+                  <span>Humidity</span>
+                </p>
+                <p>
+                  <FaWind className="wind-icon" />
+                  <span>{data.weather.hourly.wind_speed_10m[0]} km/h</span>
+                  <span>Wind Speed</span>
+                </p>
+              </div>
             </div>
           </div>
         )}

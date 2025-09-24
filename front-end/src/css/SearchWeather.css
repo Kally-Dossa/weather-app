@@ -81,3 +81,43 @@ body {
   width: 120px;
   height: 120px;
 }
+
+.additional-info {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #0288d1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  font-weight: bold;
+}
+
+.additional-info p {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.additional-info .humidity-icon,
+.additional-info .wind-icon {
+  margin-right: 8px;
+  font-size: 2rem;
+}
+
+.additional-info p span {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.additional-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 2rem;
+}

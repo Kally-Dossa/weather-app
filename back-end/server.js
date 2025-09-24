@@ -25,7 +25,7 @@ app.get("/weather", async (req, res) => {
     // 2. Forecast
     const weatherRes = await fetch(
       `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
-        `&daily=weather_code&hourly=temperature_2m,weather_code&current_weather=true`
+        `&daily=weather_code&hourly=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m&current_weather=true`
     );
     const weatherData = await weatherRes.json();
 
