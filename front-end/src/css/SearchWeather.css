@@ -122,58 +122,6 @@ body {
   gap: 2rem;
 }
 
-@media (max-width: 1024px) {
-  .search-container {
-    padding: 1.5rem;
-  }
-
-  .search-container h1 {
-    font-size: 2.5rem;
-  }
-
-  .search-container h2 {
-    font-size: 1.8rem;
-  }
-
-  .search-container input {
-    width: 80%;
-  }
-
-  .search-container button {
-    /* width: 80%; */
-  }
-
-  .current-weather-row {
-    gap: 1rem;
-  }
-
-  .temperature {
-    font-size: 2.5rem;
-  }
-
-  .weather-icon {
-    width: 100px;
-    height: 100px;
-  }
-
-  .additional-info {
-    gap: 4rem;
-  }
-
-  .additional-info p {
-    font-size: 1.1rem;
-  }
-
-  .additional-info .humidity-icon,
-  .additional-info .wind-icon {
-    font-size: 1.8rem;
-  }
-
-  .additional-info p span {
-    font-size: 1.8rem;
-  }
-}
-
 @media (max-width: 768px) {
   .search-container {
     padding: 0.5rem;
