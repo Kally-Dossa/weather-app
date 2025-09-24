@@ -38,6 +38,7 @@
   width: 70%;
   margin-right: 0.5rem;
   border: 1px solid #ccc;
+  max-width: 100%;
 }
 
 .chart-container button {
@@ -51,4 +52,38 @@
 
 .chart-container button:hover {
   background-color: #0277bd;
+}
+
+@media (max-width: 768px) {
+  .chart-page {
+    padding: 0.5rem;
+    width: 70%;
+    margin-left: 10%;
+  }
+  .chart-container {
+    padding: 2rem;
+  }
+  .chart-container input {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  .chart-container button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-page {
+    padding: 0.8rem;
+  }
+  .chart-container {
+    padding: 1rem;
+  }
+  .chart-container input {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  .chart-container button {
+    width: 80%;
+  }
 }
