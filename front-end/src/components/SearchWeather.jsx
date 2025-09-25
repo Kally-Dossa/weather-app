@@ -72,7 +72,7 @@ const SearchWeather = () => {
                 const month = d.toLocaleDateString("en-US", { month: "long" });
                 const day = d.getDate();
                 const year = d.getFullYear();
-                return `${weekday} ${month} ${day} ${year}`;
+                return `${weekday} ${day} ${month} ${year}`;
               })()}
             </h3>
             <div className="current-weather-row">
