@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import axios from "axios";
 import React from "react";
 import "../Css/MainPage.css";
@@ -82,7 +83,7 @@ const MainPage = () => {
                   />
                 </div>
               ) : (
-                <p>Loading...</p>
+                <ClipLoader color="#01579b" size={20} />
               )}
             </div>
           ))}
