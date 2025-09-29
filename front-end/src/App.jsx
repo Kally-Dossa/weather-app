@@ -3,6 +3,7 @@ import MainPage from "./components/MainPage";
 import SearchWeather from "./components/SearchWeather";
 import ChartWeather from "./components/ChartWeather";
 import Sidebar from "./components/Sidebar";
+import ForecastPage from "./components/ForecastPage";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           {activeTab === "main-page" && <MainPage />}
           {activeTab === "search-weather" && <SearchWeather />}
           {activeTab === "chart-weather" && <ChartWeather />}
+          {activeTab === "forecast-page" && <ForecastPage />}
         </div>
       </div>
     </>

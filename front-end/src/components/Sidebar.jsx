@@ -13,6 +13,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import SearchIcon from "@mui/icons-material/Search";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import HomeIcon from "@mui/icons-material/Home";
+import ThermostatIcon from "@mui/icons-material/Thermostat";
 
 import "../Css/Sidebar.css";
 
@@ -50,9 +51,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
             <ListItemIcon>
               <HomeIcon className="sidebar-icon" />
             </ListItemIcon>
-            {open && (
-              <ListItemText primary="Home page" className="sidebar-text" />
-            )}
+            {open && <ListItemText primary="Home " className="sidebar-text" />}
           </ListItem>
           <ListItem
             button
@@ -76,6 +75,18 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
             </ListItemIcon>
             {open && (
               <ListItemText primary="Chart Weather" className="sidebar-text" />
+            )}
+          </ListItem>
+          <ListItem
+            button
+            className={activeTab === "forecast-page" ? "active" : ""}
+            onClick={() => setActiveTab("forecast-page")}
+          >
+            <ListItemIcon>
+              <ThermostatIcon className="sidebar-icon" />
+            </ListItemIcon>
+            {open && (
+              <ListItemText primary="7 days forcast" className="sidebar-text" />
             )}
           </ListItem>
         </List>
