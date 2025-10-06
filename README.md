@@ -9,14 +9,14 @@ git clone https://github.com/Kally-Dossa/weather-app.git
 cd weather-app
 ```
 
-**2. Back end**  Runs on http://localhost:5000
+**2. Back end** --> Runs on http://localhost:5000
 ```bash
 cd back-end
 npm install
 node server.js
 ```
 
-**3. Front end** Runs on http://localhost:5173
+**3. Front end** --> Runs on http://localhost:5173
 
 Open a new terminal:
 ```bash
