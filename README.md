@@ -10,7 +10,6 @@ cd weather-app
 ```
 
 **2. Back end**
-
 Runs on http://localhost:5000
 ```bash
 cd back-end
@@ -19,7 +18,6 @@ node server.js
 ```
 
 **3. Front end**
-
 Runs on http://localhost:5173
 
 Open a new terminal:
